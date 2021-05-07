@@ -1,10 +1,14 @@
 # summarization_progress
 Abstractive and extractive summarization models for Russian language.
 For baseline we take models and datasets from "summarus" repository made by Gusev Ilya
+Ultimate goal: make abstractive summarization without hallucinations (more like extractive)
+### useful links:
+* https://towardsdatascience.com/understanding-automatic-text-summarization-1-extractive-methods-8eb512b21ecc
+* https://towardsdatascience.com/understanding-automatic-text-summarization-2-abstractive-methods-7099fa8656fe
 
+# Abstractive summarization
 
-# Baseline taken from https://github.com/IlyaGusev/summarus
-
+## Baseline taken from https://github.com/IlyaGusev/summarus
 ## our models:
 * gazeta_mT5_large: model ready, code in progress
 
@@ -30,3 +34,26 @@ For baseline we take models and datasets from "summarus" repository made by Guse
 | gazeta_mbart              | 32.6  | 14.6  | 28.2  | 25.7   | 49.8 |
 | gazeta_mbart_lower        | 32.7  | 14.7  | 28.3  | 25.8   | 48.7 |
 | gazeta_mt5                | -     | -     | -     | -      | -    |
+---------------------------------------------------------------------
+# Extractive summarization
+
+## Approach: https://arxiv.org/pdf/1906.04165.pdf
+## Library: https://pypi.org/project/bert-extractive-summarizer/
+
+## Target literature: 
+* "economic" - https://rusneb.ru/catalog/000199_000009_004090560/ 
+* "kolobok" - https://nukadeti.ru/skazki/kolobok
+### Full text results:
+#### "economic" target book
+* https://drive.google.com/file/d/119vyOYTdgRgxe5vtp4BHx6qVV6PL8eyr/view?usp=sharing - LABSE
+* https://drive.google.com/file/d/1cNuVTOpwtvVNCE1nyHAmDwVc2SeKE5Mu/view?usp=sharing - MBART
+* https://drive.google.com/file/d/1JZUQd5AAWxUZywXpRBAcsS5DpmI4FSTF/view?usp=sharing - ROBERTA
+* https://drive.google.com/file/d/1w2_3Yet_mp8ZVPoUcn9cuwrCSYzE-4Sd/view?usp=sharing - RUBERT
+
+#### "kolobok" target book
+* https://drive.google.com/file/d/1rkNn-3DDeQdWDhdLPsaR8qEWBgbss3Yj/view?usp=sharing - LABSE
+* https://drive.google.com/file/d/1ToKoaUlhfb2rQzWmikQLJeqNBieguSe2/view?usp=sharing - MBART
+* https://drive.google.com/file/d/1_FZSi21bjFYslM5wRVFk72m_YreRO1Cm/view?usp=sharing - ROBERTA
+* https://drive.google.com/file/d/1GELgHVS_4OmGzKperSfLpZZG75Y_Otqd/view?usp=sharing - RUBERT
+
+### in my opinion, LABSE is the best
